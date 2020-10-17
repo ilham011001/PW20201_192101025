@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kalkulator</title>
+    </head>
+    <body>
+        <table style="margin: 200px auto">
+            <tr>
+                <td>Nilai 1</td>
+                <td></td>
+                <td>Nilai 2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" id="nilai_1">
+                </td>
+                <td>
+                    <select id="operasi">
+                        <option value="tambah">+</option>
+                        <option value="kurang">-</option>
+                        <option value="kali">*</option>
+                        <option value="bagi">/</option>
+                        <option value="pangkat">^</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="nilai_2">
+                </td>
+                <td>
+                    <button id="btn_submit" onclick="hitung()">Submit</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center"><p style="color: red" id="hasil"></p></td>
+            </tr>
+        </table>
+    </body>
+
+    <script>
+        function hitung() {
+            var nilai_1 = parseInt(document.getElementById('nilai_1').value)
+            var nilai_2 = parseInt(document.getElementById('nilai_2').value)
+            var hasil = 0;
+            var operasi = document.getElementById('operasi').value
+
+            if (operasi == 'tambah')
+                hasil = nilai_1 + nilai_2
+            else if (operasi == 'kurang')
+                hasil = nilai_1 - nilai_2
+            else if (operasi == 'kali')
+                hasil = nilai_1 * nilai_2
+            else if (operasi == 'bagi')
+                hasil = nilai_1 / nilai_2
+            else if (operasi == 'pangkat')
+                hasil = Math.pow(nilai_1, nilai_2)
+
+            alert(hasil)
+        }
+    </script>
+</html>

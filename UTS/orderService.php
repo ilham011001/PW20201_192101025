@@ -4,7 +4,7 @@
     {
         if ($quantity == 1) return 0;
 
-        return $quantity * 75000;
+        return ($quantity - 1) * 75000;
     }
 
     function additional_cost($payment, $long_time, $price, $cost_springbed)

@@ -11,7 +11,6 @@
             <td>Jumlah</td>
             <td>Harga</td>
             <td>Nilai Persediaan</td>
-            <td>Action</td>
         </tr>
         @foreach($lkses as $lks)
             <tr>
@@ -20,17 +19,6 @@
                 <td>{{ $lks->quantity }}</td>
                 <td>{{ $lks->price }}</td>
                 <td>{{ $lks->quantity * $lks->price }}</td>
-                <td>
-                    <a href="{{ route('lks.edit', $lks->id) }}">edit</a> |
-                    {{--                    <a href="#">hapus</a>--}}
-                    <a href="#" class="btn-delete" data-id='{{ $lks->id }}'>hapus</a>
-
-                    <form action="{{ route('lks.destroy', $lks->id) }}" method="POST" id="delete-form-{{ $lks->id }}"
-                          style="display: none;">
-                        @csrf @method('delete')
-                        <input type="hidden" value="{{ $lks->id }}" name="id">
-                    </form>
-                </td>
             </tr>
         @endforeach
     </table>

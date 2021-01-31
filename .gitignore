@@ -1,0 +1,13 @@
+/Uas-pwb/node_modules
+/Uas-pwb/public/hot
+/Uas-pwb/public/storage
+/Uas-pwb/storage/*.key
+/Uas-pwb/vendor
+Uas-pwb/.env
+Uas-pwb/.env.backup
+Uas-pwb/.phpunit.result.cache
+Uas-pwb/docker-compose.override.yml
+Uas-pwb/Homestead.json
+Uas-pwb/Homestead.yaml
+Uas-pwb/npm-debug.log
+Uas-pwb/yarn-error.log
